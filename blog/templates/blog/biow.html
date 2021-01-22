@@ -31,7 +31,7 @@
     }
     form {
     padding: 25px;
-    background-color: #fccedd;
+    background-color: #F2C8C4;
     }
     
   .carousel-inner img {
@@ -109,236 +109,77 @@
       <span class="sr-only">𝑵𝒆𝒙𝒕</span>
     </a>
 </div>
-
-<div id="Project" class="container">   
-{% for post in posts %}
-            <div>
-                <h3><a href="">{{ post.title }}</a></h3>
-                <p>published: {{ post.published_date }}</p>
-                <p>{{ post.text|linebreaksbr }}</p>
-                <!-- <br><br><br> -->
-            </div>
-            {% endfor %}
-</div>
   
 <div id="Project" class="container text-center">    
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      background-color: #f1f1f1;
-      padding: 20px;
-      font-family: Arial;
-    }
-    
-    /* Center website */
-    .main {
-      max-width: 1000px;
-      margin: auto;
-    }
-    
-    h1 {
-      font-size: 50px;
-      word-break: break-all;
-    }
-    
-    .row {
-      margin: 10px -16px;
-    }
-    
-    /* Add padding BETWEEN each column */
-    .row,
-    .row > .column {
-      padding: 8px;
-    }
-    
-    /* Create three equal columns that floats next to each other */
-    .column {
-      float: left;
-      width: 33.33%;
-      display: none; /* Hide all elements by default */
-    }
-    
-    /* Clear floats after rows */ 
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Content */
-    .content {
-      background-color: white;
-      padding: 10px;
-    }
-    
-    /* The "show" class is added to the filtered elements */
-    .show {
-      display: block;
-    }
-    
-    /* Style the buttons */
-    .btn {
-      border: none;
-      outline: none;
-      padding: 12px 16px;
-      background-color: white;
-      cursor: pointer;
-    }
-    
-    .btn:hover {
-      background-color: rgb(221, 221, 221);
-    }
-    
-    .btn.active {
-      background-color: #666;
-      color: white;
-    }
-    </style>
-
-
-  <!-- MAIN (Center website) -->
-<div class="main">
-    
-    
-    <h2>𝑨𝒓𝒕𝒘𝒐𝒓𝒌</h2>
-    
-    <div id="myBtnContainer">
-      <button class="btn active" onclick="filterSelection('all')"> 𝑺𝒉𝒐𝒘 𝒂𝒍𝒍</button>
-      <button class="btn" onclick="filterSelection('nature')"> 𝑮𝒊𝒓𝒍</button>
-      <button class="btn" onclick="filterSelection('cars')"> 𝑯𝑨𝑴𝑰</button>
-      <button class="btn" onclick="filterSelection('people')"> 𝒀𝑶𝑹𝑰</button>
+  <h2>𝑨𝒓𝒕𝒘𝒐𝒓𝒌</h2><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="https://i.pinimg.com/564x/f5/91/7c/f5917c205f7439bbd3538ccad554250d.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="overlay">𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝟏 <br>𝟏𝟓 𝑨𝒑𝒓𝒊𝒍 𝟐𝟎𝟏𝟕 </div>
     </div>
-    
-    <!-- Portfolio Gallery Grid -->
-    <div class="row">
-      <div class="column nature">
-        <div class="content">
-          <img src="https://i.pinimg.com/564x/7e/37/f5/7e37f5ad8bec79e68cfedd8f7d6c181f.jpg" alt="Mountains" style="width:100%">
-          <h4>𝑮𝒊𝒓𝒍 𝑰</h4>
-          <p>𝟏𝟓 𝑨𝒑𝒓𝒊𝒍 𝟐𝟎𝟏𝟕</p>
-        </div>
-      </div>
-      <div class="column cars">
-        <div class="content">
-        <img src="https://i.pinimg.com/564x/67/19/f9/6719f9b89f2aa4c6012384f7792291e0.jpg" alt="Car" style="width:100%">
-          <h4>𝑯𝑨𝑴𝑰 𝑰</h4>
-          <p>𝟏 𝑴𝒂𝒓𝒄𝒉 𝟐𝟎𝟏𝟖 </p>
-        </div>
-      </div>
-
-      <div class="column people">
-        <div class="content">
-        <img src="https://i.pinimg.com/564x/31/d6/46/31d6461255b1cb2f5ac0aecbfe7720cc.jpg" alt="Lights" style="width:100%">
-          <h4>𝒀𝑶𝑹𝑰 𝑰</h4>
-          <p>𝟐𝟓 𝑴𝒂𝒚 𝟐𝟎𝟏𝟖</p>
-        </div>
-      </div>
-
-      <div class="column cars">
-        <div class="content">
-        <img src="https://i.pinimg.com/564x/ee/06/b5/ee06b58bad763db781e204f36a66a748.jpg" alt="Car" style="width:100%">
-          <h4>𝑯𝑨𝑴𝑰 𝑰𝑰</h4>
-          <p>𝟏𝟓 𝑱𝒖𝒏𝒆 𝟐𝟎𝟏𝟗 </p>
-        </div>
-      </div>
-      
-      <div class="column people">
-        <div class="content">
-        <img src="https://i.pinimg.com/564x/5e/ae/30/5eae303cfc2681eda857f1807dd6c9ad.jpg" alt="Lights" style="width:100%">
-          <h4>𝒀𝑶𝑹𝑰 𝑰𝑰</h4>
-          <p>𝟏𝟖 𝑱𝒖𝒍𝒚 𝟐𝟎𝟏𝟗 </p>
-        </div>
-      </div>
-      <div class="column cars">
-        <div class="content">
-        <img src="https://i.pinimg.com/564x/46/96/8d/46968d8a19662de6904ebcc1300af367.jpg" alt="Car" style="width:100%">
-          <h4>𝑯𝑨𝑴𝑰 𝑰𝑰𝑰</h4>
-          <p>𝟓 𝑵𝒐𝒗𝒆𝒎𝒃𝒆𝒓 𝟐𝟎𝟏𝟗</p>
-        </div>
-      </div>
-    
-      <div class="column nature">
-        <div class="content">
-          <img src="https://i.pinimg.com/564x/36/67/be/3667bedfcf34ac8f1a48f56c577281eb.jpg" alt="Mountains" style="width:100%">
-          <h4>𝑮𝒊𝒓𝒍 𝑰𝑰</h4>
-          <p>𝟏𝟒 𝒋𝒂𝒏𝒖𝒂𝒓𝒚 𝟐𝟎𝟐𝟏</p>
-        </div>
-      </div>
-      <div class="column people">
-        <div class="content">
-        <img src="https://i.pinimg.com/564x/3f/a0/13/3fa0130e5b2b5990fad2f4ac80cc76f2.jpg" alt="Lights" style="width:100%">
-          <h4>𝒀𝑶𝑹𝑰 𝑰𝑰𝑰</h4>
-          <p>𝟏 𝑫𝒆𝒄𝒆𝒎𝒃𝒆𝒓 𝟐𝟎𝟐𝟏</p>
-        </div>
-      </div>
-      <div class="column people">
-        <div class="content">
-        <img src="https://i.pinimg.com/564x/c4/78/e2/c478e2885b3be352232f58fb9d0b45e7.jpg" alt="Lights" style="width:100%">
-          <h4>𝒀𝑶𝑹𝑰 𝑰𝑽</h4>
-          <p>𝟐𝟕 𝑭𝒆𝒃𝒓𝒖𝒂𝒓𝒚 𝟐𝟎𝟐𝟐</p>
-        </div>
-      </div>
-    <!-- END GRID -->
+    <div class="col-sm-4"> 
+      <img src="https://i.pinimg.com/564x/1d/03/34/1d033446fe0eb3baae87d872e879924c.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="overlay">𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝟐  <br>𝟏 𝑴𝒂𝒓𝒄𝒉 𝟐𝟎𝟏𝟖 </div>
     </div>
-    
-    <!-- END MAIN -->
+    <div class="col-sm-4"> 
+      <img src="https://i.pinimg.com/564x/1b/0a/b7/1b0ab74891d681d8cdc6fa9afee6ccb2.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="overlay">𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝟑  <br>𝟐𝟓 𝑴𝒂𝒚 𝟐𝟎𝟏𝟖</div> 
+    </div> 
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="https://i.pinimg.com/564x/d0/ff/4f/d0ff4f6d2e7eeae4dc3b2e2be867f9f0.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="overlay">𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝟒 <br>𝟏𝟓 𝑱𝒖𝒏𝒆 𝟐𝟎𝟏𝟗 </div>
     </div>
-    
-    <script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("column");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
-    
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-      }
-    }
-    
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-    
-    
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    </script>
+    <div class="col-sm-4"> 
+      <img src="https://i.pinimg.com/564x/39/2e/c1/392ec1a514ddcc711224ff3d5b1c7f88.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="overlay">𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝟓 <br>𝟏𝟖 𝑱𝒖𝒍𝒚 𝟐𝟎𝟏𝟗 </div>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="https://i.pinimg.com/564x/59/e1/72/59e172dde4be3f5cf172da711ecb7429.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="overlay">𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝟔  <br>𝟓 𝑵𝒐𝒗𝒆𝒎𝒃𝒆𝒓 𝟐𝟎𝟏𝟗</div>
+         
+    </div> 
+  </div>
 </div><br>
 
 <footer class="container-fluid text-center">
   <p1>𝑻𝒉𝒊𝒔 𝒂𝒓𝒕𝒘𝒐𝒓𝒌 𝒊𝒔 𝒊𝒏𝒕𝒆𝒏𝒅𝒆𝒅 𝒕𝒐 𝒔𝒉𝒐𝒘 𝒕𝒉𝒆 𝒂𝒓𝒕𝒊𝒔𝒕'𝒔 𝒂𝒓𝒕𝒘𝒐𝒓𝒌 𝒂𝒏𝒅 𝒂𝒍𝒍𝒐𝒘 𝒗𝒊𝒔𝒊𝒕𝒐𝒓𝒔 𝒕𝒐 𝒆𝒏𝒕𝒆𝒓 𝒕𝒉𝒆 𝒘𝒆𝒃𝒔𝒊𝒕𝒆 𝒕𝒐 𝒂𝒑𝒑𝒓𝒆𝒄𝒊𝒂𝒕𝒆 𝒕𝒉𝒆 𝒘𝒐𝒓𝒌.<br>งานศิลปะนี้มีวัตถุประสงค์เพื่อแสดงผลงานของศิลปิน และอนุญาตให้ผู้เยี่ยมชมเข้าสู่เว็บไซต์เพื่อชื่นชมผลงาน</p1>
 </footer><br>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: relative; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+</style>
 
 
 
@@ -351,7 +192,7 @@
             input[type=text], select, textarea {
               width: 100%;
               padding: 12px;
-              border: 1px solid rgb(175, 36, 36);
+              border: 1px solid #ccc;
               border-radius: 4px;
               box-sizing: border-box;
               margin-top: 6px;
@@ -403,12 +244,16 @@
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                 </p2>
                 <input type="submit" value="Submit">
-                
+                <br>
+                <br><p2>𝑫𝒆𝒗𝒆𝒍𝒐𝒑 𝒃𝒚 : </p2>
+                <p2>𝑾𝒊𝒌𝒂𝒏𝒅𝒂 𝑪𝒉𝒂𝒏𝒔𝒆𝒓𝒆𝒆𝒌𝒐𝒓𝒏 <br>𝑺𝒕𝒖𝒅𝒆𝒏𝒕 𝑰𝑫: 𝟔𝟏𝟏𝟎𝟏𝟏𝟎𝟒𝟎𝟖<br> 𝑫𝒆𝒑𝒂𝒓𝒕𝒎𝒆𝒏𝒕 𝑶𝒇 𝑪𝒐𝒎𝒑𝒖𝒕𝒆𝒓 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓𝒊𝒏𝒈 <br> 𝑭𝒂𝒄𝒖𝒍𝒕𝒚 𝑶𝒇 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓𝒊𝒏𝒈 <br> 𝑷𝒓𝒊𝒏𝒄𝒆 𝑶𝒇 𝑺𝒐𝒏𝒈𝒌𝒍𝒂 𝑼𝒏𝒊𝒗𝒆𝒓𝒔𝒊𝒕𝒚<br>𝑬𝒎𝒂𝒊𝒍 : 𝟔𝟏𝟏𝟎𝟏𝟏𝟎𝟒𝟎𝟖@𝒑𝒔𝒖.𝒂𝒄.𝒕𝒉</p2>
               </form>
             </div>
 </div>
 
 <div class="container">
+    <p> วัตถุประสงค์: เพื่อแสดงผลงานของศิลปิน และอนุญาตให้ผู้เยี่ยมชมเข้าสู่เว็บไซต์เพื่อชื่นชมผลงาน</p>
+    
     <br><h20><B>𝑹𝒆𝒇𝒆𝒓𝒆𝒏𝒄𝒆𝒔</B></h20>
     <br>● 𝑨𝒓𝒕𝒘𝒐𝒓𝒌 >>> <a href="https://www.pinterest.com/pin/346003183872531474/">𝑪𝒍𝒊𝒄𝒌</a>
     <br>● 𝒄𝒐𝒅𝒆 >>> <a href="https://www.w3schools.com/bootstrap/bootstrap_templates.asp?fbclid=IwAR0S-qRfyiXpX1KLP3rC_6lpAp0qFEw0bvkf1fF2XlIp3fmQxU3acpz3TF0">𝑪𝒍𝒊𝒄𝒌</a>
